@@ -114,7 +114,8 @@
                     Do You Consent Sending your Information:<br>
                     <input type="radio" name="gender" id="male">Yes<br>
                     <input type="radio" name="gender" id="female">No<br>
-                    <input type="submit" value="Submit" id="Submit1">
+                    
+                    <input type="submit" value="Submit" id="Submit1" href="thank_you.html">
                     
                         
                     
@@ -171,7 +172,7 @@
         </div>
     </div>
     <script>
-        document.getElementById("registrationForm").onsubmit = function () {
+        document.getElementById("Submit1").onsubmit = function () {
             window.location.href = "thank_you.html"; 
             return false; 
         };
