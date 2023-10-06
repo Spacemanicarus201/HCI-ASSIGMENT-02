@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI ASSIGMETNT-02</title>
+    <style>
+        h1 {
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("./wolf.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.7);
+            font-family: Lucida Handwriting, Times, Serif;
+        }
+
+        p {
+            font-family: Lucida Handwriting, Times, Serif;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 120vh;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Fieldset yang kanan */
+        .fieldset-2 {
+            /* height: 46.5vh; */
+        }
+
+        h1{
+            color: rgb(18, 235, 247);
+        }
+        h3{
+            color:blueviolet;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Xian Tutoring Registration Form</h1>
+    </center>
+    <div class="row">
+        <div class="column">
+            <form action="thank_you.html" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+
+                    <br>
+                    
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" name="birthdate"><br><br>
+                    
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> My Name Is correct</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> My Email is correct</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> My Phone is correct</label>
+                    <br>
+                    <br>
+                    Do You Consent Sending your Information:<br>
+                    <input type="radio" name="gender" id="male">Yes<br>
+                    <input type="radio" name="gender" id="female">No<br>
+                    <input type="submit" value="Submit" id="Submit1">
+                    
+                        
+                    
+                
+                </form>
+
+                </fieldset>
+                <fieldset>
+                    <legend>My Contact Information</legend>
+                    <h3>Phone Number : <h2>08326863356</h2></h3>
+                    
+                </fieldset>
+            </form>
+        </div>
+        <div class="column">
+            <fieldset class="fieldset-2">
+                <legend>Preferences</legend>
+                <table border="1">
+                    <tr>
+                        <th colspan="4">My Expertises</th>
+                    </tr>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Level of Expertise</th>
+                        <th>Topic</th>
+                        <th>Level of Expertise</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Mathematics</td>
+                        <td>Advanced</td>
+                        <td>Science</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Programming</td>
+                        <td rowspan="3">Expert</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">English</td>
+                        <td>Intermediate</td>
+                        <td>History</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced</td>
+                        <td>Languages</td>
+                    </tr>
+                </table>
+
+
+
+
+            </fieldset>
+        </div>
+    </div>
+    <script>
+        document.getElementById("registrationForm").onsubmit = function () {
+            window.location.href = "thank_you.html"; 
+            return false; 
+        };
+    </script>
+
+</body>
+
+</html>
